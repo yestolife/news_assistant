@@ -4,10 +4,10 @@ from modelscope import AutoModelForCausalLM, AutoTokenizer
 
 def load_model():
     model = AutoModelForCausalLM.from_pretrained(
-        "qwen/qwen-7b-chat",
+        "qwen/qwen-1_8b-chat",
         device_map="auto"
     )
-    tokenizer = AutoTokenizer.from_pretrained("qwen/qwen-7b-chat")
+    tokenizer = AutoTokenizer.from_pretrained("qwen/qwen-1_8b-chat")
     return model, tokenizer
 
 
