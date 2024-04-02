@@ -3,3 +3,4 @@ modelscope
 transformers
 transformers_stream_generator
 accelerate
+tiktoken
