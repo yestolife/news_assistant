@@ -5,9 +5,10 @@ from modelscope import AutoModelForCausalLM, AutoTokenizer
 def load_model():
     model = AutoModelForCausalLM.from_pretrained(
         "qwen/qwen-1_8b-chat",
+        trust_remote_code=True,
         device_map="auto"
     )
-    tokenizer = AutoTokenizer.from_pretrained("qwen/qwen-1_8b-chat")
+    tokenizer = AutoTokenizer.from_pretrained("qwen/qwen-1_8b-chat",trust_remote_code=True)
     return model, tokenizer
 
 
