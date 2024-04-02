@@ -31,6 +31,7 @@ def news_writer(prompt):
         output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
     ]
     response = tokenizer.batch_decode(generated_ids, skip_special_tokens=True)[0]
+    print(response)
     return response
 
     
