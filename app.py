@@ -45,4 +45,4 @@ webui = gr.Interface(
     title="新闻写作助手",
     allow_flagging='never') 
 
-webui.launch(share=True)
+webui.launch()
