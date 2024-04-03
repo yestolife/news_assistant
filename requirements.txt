@@ -1,4 +1,4 @@
-gradio
+gradio==4.24.0
 modelscope
 transformers
 transformers_stream_generator
