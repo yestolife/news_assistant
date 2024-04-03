@@ -37,11 +37,12 @@ def news_writer(prompt):
     
 # model, tokenizer = load_model()
 # device = "cuda"
-with gr.Interface(
+
+webui = gr.Interface(
     news_writer, 
     inputs=[gr.Textbox(label="输入主要内容", lines=5)],
     outputs=[gr.Textbox(label="生成新闻", lines=5)],
     title="新闻写作助手",
-    allow_flagging='never'
-) as demo:
-    demo.launch(share=True)
+    allow_flagging='never') 
+
+webui.launch(share=True)
