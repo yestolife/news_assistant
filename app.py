@@ -3,9 +3,11 @@ from modelscope import AutoModelForCausalLM, AutoTokenizer
 import os
 from swift.llm import get_model_tokenizer, ModelType
 from swift.tuners import Swift
+from modelscope import snapshot_download
+
 
 def load_model():
-    ckpt_dir = 'checkpoint-280'
+    ckpt_dir = snapshot_download('andytl/news_assistant')
     model_type = ModelType.qwen_7b_chat
     model, tokenizer = get_model_tokenizer(model_type, model_kwargs={'device_map': 'auto'})
     model = Swift.from_pretrained(model, ckpt_dir, inference_mode=True)
